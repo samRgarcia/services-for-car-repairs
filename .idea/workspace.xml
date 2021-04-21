@@ -11,11 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="202f16b1-c0c8-4b94-9fbc-dd4f1b744cb6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/service/client/querys/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/client/getClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/client/getClient.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/client/postClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/client/postClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/car.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/car.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/list_problems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/list_problems.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/clients.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/clients.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/client/serviceClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/client/serviceClient.js" afterDir="false" />
     </list>
@@ -61,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1618964247191</updated>
       <workItem from="1618964248258" duration="8651000" />
-      <workItem from="1618976764068" duration="1197000" />
+      <workItem from="1618976977610" duration="8622000" />
     </task>
     <servers />
   </component>
@@ -85,9 +84,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1189" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1618973210182" />
-    <state x="297" y="305" key="FileChooserDialogImpl" timestamp="1618978522250">
+    <state x="1095" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1618979787379">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="297" y="305" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1618978522250" />
+    <state x="1095" y="243" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1618979787379" />
   </component>
 </project>

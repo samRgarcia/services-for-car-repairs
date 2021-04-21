@@ -1,28 +1,32 @@
-import {registerNewProblems} from '../../service/client/serviceClient';
+import {registerNewProblems, approveSolution,denySolution} from '../../service/client/serviceClient';
 
-export async function postRegisterProblems( req, res) {
+export async function postRegisterProblems(req, res) {
     try {
-          await registerNewProblems()
-        res.status(200).json({message:"register"})
-    }catch (e) {
+        await registerNewProblems()
+        res.status(200).json({message: "register"})
+    } catch (e) {
         console.log(e)
-        res.status(500).json({data:"server error"})
+        res.status(500).json({data: "server error"})
 
     }
 }
 
-export async function postApproveSolution( req, res) {
+export async function postApproveSolution(req, res) {
     try {
-        res.status(200).json({data:"beta"})
-    }catch (e) {
-
+        const {idMechanical} = req.query;
+        await approveSolution(idMechanical)
+        res.status(200).json({messsage: "ok"})
+    } catch (e) {
+        res.status(500).json({messsage: "server error"})
     }
 }
 
-export async function postDenySolution( req, res) {
+export async function postDenySolution(req, res) {
     try {
-        res.status(200).json({data:"beta"})
-    }catch (e) {
-
+        const {idMechanical} = req.query;
+       await denySolution(idMechanical)
+        res.status(200).json({messsage: "ok"})
+    } catch (e) {
+        res.status(500).json({messsage: "server error"})
     }
 }
