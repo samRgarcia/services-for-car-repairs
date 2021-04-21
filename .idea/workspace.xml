@@ -11,7 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="202f16b1-c0c8-4b94-9fbc-dd4f1b744cb6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/controllers/client/getClient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/client/postClient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/client/updateClient" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/mechanic/getMechanic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/mechanic/postMechanic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/mechanic/updateMechanic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/carMechanic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/clients.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/client/serviceClient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/mechanic/serviceMechanic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +32,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1rSKrHVQHPNlUOjSljAfigv6ffI" />
   <component name="ProjectViewState">
@@ -41,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618964247191</updated>
-      <workItem from="1618964248258" duration="2223000" />
+      <workItem from="1618964248258" duration="4183000" />
     </task>
     <servers />
   </component>
@@ -58,5 +76,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1189" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618970033617">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1189" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1618970033617" />
   </component>
 </project>

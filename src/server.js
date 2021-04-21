@@ -2,6 +2,7 @@ import express,{json} from 'express';
 import http from 'http';
 import morgan from  'morgan';
 import cors from 'cors';
+import routesUrl from '../src/routes/index';
 
 class Server{
     constructor() {
@@ -15,7 +16,7 @@ class Server{
         this.app.use(json());
     }
     initRouter(){
-
+        this.app.use('/api',routesUrl);
     }
     execute(){
         this.middleware();
