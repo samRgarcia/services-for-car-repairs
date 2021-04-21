@@ -1,7 +1,7 @@
 import Sequelize from "sequelize";
 import {sequelize} from "../config/database";
 
-const Car = sequelize.define('car', {
+const Cars = sequelize.define('cars', {
         idcars: {
             type: Sequelize.INTEGER,
             primaryKey: true
@@ -23,4 +23,4 @@ const Car = sequelize.define('car', {
 );
 
 
-export default Car;
+export default Cars;
