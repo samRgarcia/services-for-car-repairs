@@ -1,4 +1,9 @@
-import {registerNewProblems, approveSolution,denySolution} from '../../service/client/serviceClient';
+import {
+    registerNewProblems,
+    approveSolution,
+    denySolution,
+    acceptedSuggestion, acceptedJobs, denyJobs
+} from '../../service/client/serviceClient';
 
 export async function postRegisterProblems(req, res) {
     try {
@@ -35,3 +40,25 @@ export async function postDenySolution(req, res) {
 }
 
 
+export async function postAcceptedJobs(req, res) {
+    try {
+        const {idmechanic_suggestions} = req.body;
+        await acceptedJobs(idmechanic_suggestions)
+        res.status(200).json({message: "register"})
+    } catch (e) {
+        console.log(e)
+        res.status(500).json({data: "server error"})
+
+    }
+}
+export async function postDenyJobs(req, res) {
+    try {
+        const {idmechanic_suggestions} = req.body;
+        await denyJobs(idmechanic_suggestions)
+        res.status(200).json({message: "register"})
+    } catch (e) {
+        console.log(e)
+        res.status(500).json({data: "server error"})
+
+    }
+}

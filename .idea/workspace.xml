@@ -11,25 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="202f16b1-c0c8-4b94-9fbc-dd4f1b744cb6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controllers/client/query/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/registerUser/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/mechanic/querys/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/registerUser/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/client/updateClient.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/client/getClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/client/getClient.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/client/postClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/client/postClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/mechanic/getMechanic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/mechanic/getMechanic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/mechanic/postMechanic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/mechanic/postMechanic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/client/updateClient" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/mechanic/updateMechanic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/mechanic/updateMechanic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/jobs_started.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/jobs_started.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/mechanic_suggestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/mechanic_suggestions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/mechanical.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/mechanical.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/carMechanic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/carMechanic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/clients.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/clients.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/client/querys/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/client/querys/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/client/serviceClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/client/serviceClient.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/mechanic/serviceMechanic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/mechanic/serviceMechanic.js" afterDir="false" />
@@ -63,7 +51,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../system-for-car-repairs" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -82,7 +70,8 @@
       <workItem from="1619093586324" duration="18000" />
       <workItem from="1619149553104" duration="4381000" />
       <workItem from="1619154949006" duration="1843000" />
-      <workItem from="1619184298586" duration="13171000" />
+      <workItem from="1619184298586" duration="15194000" />
+      <workItem from="1619267552208" duration="18242000" />
     </task>
     <servers />
   </component>
@@ -106,13 +95,33 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1189" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1618973210182" />
-    <state x="312" y="279" key="FileChooserDialogImpl" timestamp="1619150487036">
+    <state x="136" y="113" width="882" height="840" key="DiffContextDialog" timestamp="1619288536124">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="312" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1619150487036" />
+    <state x="136" y="113" width="882" height="840" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1619288536124" />
+    <state x="312" y="279" key="FileChooserDialogImpl" timestamp="1619267558965">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="312" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1619267558965" />
+    <state x="1052" y="264" key="run.anything.popup" timestamp="1619269302748">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1052" y="264" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1619269302748" />
     <state x="1095" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1619017150545">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1095" y="243" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1619017150545" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/service/mechanic/serviceMechanic.js</url>
+          <line>9</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

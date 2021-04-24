@@ -19,7 +19,7 @@ export async function updateSuggestSolution(req, res) {
 
 export async function updateFinishJob(req, res) {
     try {
-        const {idjobs_started} = req.query;
+        const {idjobs_started} = req.body;
         console.log("idjobs_started",idjobs_started)
         await registerFinishJob(idjobs_started)
         res.status(200).json({message:"ok"})

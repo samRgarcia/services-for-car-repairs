@@ -1,4 +1,4 @@
-import {tracingStatus,idSuggestionsClient} from '../../service/client/serviceClient';
+import {tracingStatus, idSuggestionsClient, historyTracingStatus} from '../../service/client/serviceClient';
 
 export async function getAllProblems(req, res) {
     try {
@@ -19,6 +19,19 @@ export async function getTracing(req, res) {
 
     }
 }
+
+export async function getTracingHistory(req, res) {
+    try {
+        const {idClient} = req.query;
+        const data = await historyTracingStatus(idClient)
+        res.status(200).json(data)
+    } catch (e) {
+        console.log(e)
+        res.status(500).json({message: "server error"})
+
+    }
+}
+
 export async function getIdSuggestios(req, res) {
     try {
         const {idClient} = req.query;
