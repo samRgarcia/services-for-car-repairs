@@ -2,32 +2,33 @@ import {sequelize} from '../../config/database'
 import Car from "../../model/car";
 import Mechanical_problems from "../../model/mechanical_problems";
 import List_problems from "../../model/list_problems";
-import {QUERY_TRACING} from "./querys";
+import {QUERY_ID_VIEW_SUGGESTIONS_CLIENT, QUERY_TRACING} from "./querys";
+import {QUERY_FILTER_ALL_PROBLEMS_OPEN} from "../mechanic/querys";
 //car-model, car-license-place,client
 //idClient description-problems, status,cardId
 //item-description, mechanial-problems-id
 
-export async function registerNewProblems(data) {
-    const ID_CAR_REGISTER = await registerCar();
-    const ID_REGISTER_PROBLEMS = await registerMechanicalProblems(ID_CAR_REGISTER)
-    await newListProblems([{description: "item1"}, {description: "item2"}], ID_REGISTER_PROBLEMS)
+export async function registerNewProblems(registerProblems,problems,listProblems,idClient) {
+    const ID_CAR_REGISTER = await registerCar(registerProblems,idClient);
+    const ID_REGISTER_PROBLEMS = await registerMechanicalProblems(problems,ID_CAR_REGISTER)
+    await newListProblems(listProblems, ID_REGISTER_PROBLEMS)
     console.log(ID_CAR_REGISTER, "ID_CAR_REGISTER")
     console.log(ID_REGISTER_PROBLEMS, "ID_REGISTER_PROBLEMS")
 }
 
-async function registerCar() {
+async function registerCar(registerProblems,idClient) {
     let req = await Car.create({
-        model: "Ford musthan",
-        license_place: "XXXX",
-        client_idclient: 1
+        model: registerProblems.model,
+        license_place: registerProblems.license_place,
+        client_idclient: idClient
     });
     const ID_CAR = req.null;
     return ID_CAR;
 }
 
-async function registerMechanicalProblems(idCars) {
+async function registerMechanicalProblems(problems,idCars) {
     let req = await Mechanical_problems.create({
-        descriptions: "Description de manera mas general general",
+        descriptions: problems.descriptions,
         status: "open",
         cars_idcars: idCars
     });
@@ -55,6 +56,15 @@ export async function tracingStatus(idClient) {
     return req;
 }
 
+export async function idSuggestionsClient(idClient) {
+    const req = await sequelize.query(QUERY_ID_VIEW_SUGGESTIONS_CLIENT, {
+        replacements: [idClient],
+        type: sequelize.QueryTypes.SELECT,
+        raw: true,
+        nest: true
+    });
+    return req;
+}
 export async function approveSolution(idMechanical) {
     await Mechanical_problems.update(
         {status: "approve"},

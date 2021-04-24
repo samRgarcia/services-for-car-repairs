@@ -1,16 +1,27 @@
-export async function postStartJob( req, res) {
+import {registerSuggestSolution, registerStartJob} from '../../service/mechanic/serviceMechanic';
+
+export async function postStartJob(req, res) {
     try {
-        res.status(200).json({data:"get get"})
-    }catch (e) {
+        const {idCar, idMechanical} = req.body
+        await registerStartJob(idCar, idMechanical)
+        res.status(200).json({message: "ok"})
+    } catch (e) {
+        res.status(500).json({message: "server error"})
 
     }
 }
 
-export async function postFinishJob( req, res) {
+
+
+export async function postSuggestSolution(req, res) {
     try {
-        res.status(200).json({data:"get get"})
-    }catch (e) {
+        const {suggestions, price, idCard, mechanicalStaff} = req.body;
+        console.log(req.body)
+        await registerSuggestSolution(suggestions, price, idCard, mechanicalStaff)
+        res.status(200).json({message: "ok"})
+    } catch (e) {
+        console.log(e)
+        res.status(500).json({message: "server"})
 
     }
 }
-

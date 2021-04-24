@@ -17,7 +17,13 @@ const Client = sequelize.define('client', {
         },
         gender: {
             type: Sequelize.STRING,
-        }
+        },
+        phone: {
+            type: Sequelize.STRING,
+        },
+        email: {
+            type: Sequelize.STRING,
+        },
     },
     {
         freezeTableName: true,

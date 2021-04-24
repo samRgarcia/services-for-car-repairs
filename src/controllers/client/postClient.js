@@ -2,7 +2,10 @@ import {registerNewProblems, approveSolution,denySolution} from '../../service/c
 
 export async function postRegisterProblems(req, res) {
     try {
-        await registerNewProblems()
+        console.log("Register data",req.body)
+        const {registerProblems,problems,listProblems} = req.body;
+        const idClient = 1;
+        await registerNewProblems(registerProblems,problems,listProblems,idClient)
         res.status(200).json({message: "register"})
     } catch (e) {
         console.log(e)
@@ -30,3 +33,5 @@ export async function postDenySolution(req, res) {
         res.status(500).json({messsage: "server error"})
     }
 }
+
+
