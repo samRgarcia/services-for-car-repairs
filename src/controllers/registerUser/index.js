@@ -2,9 +2,9 @@ import {createNewUser} from '../../service/registerUser';
 
 export async function postRegisterUser(req, res) {
     try {
-        const {data,rol} = req.query;
+        const {name, last_name, first_name, gender, phone, email, user, password, rol} = req.body;
 
-        createNewUser(data, rol)
+        await createNewUser(name, last_name, first_name, gender, phone, email, user, password, rol)
         res.status(200).json({messsage: "ok"})
     } catch (e) {
         res.status(500).json({messsage: "server error"})

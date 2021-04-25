@@ -1,4 +1,10 @@
-import {allProblemsOpen, listItemProblems, mySuggestions,myAllJobs} from "../../service/mechanic/serviceMechanic";
+import {
+    allProblemsOpen,
+    listItemProblems,
+    mySuggestions,
+    myAllJobs,
+    searchEndStartDate
+} from "../../service/mechanic/serviceMechanic";
 
 export async function getAllProblems(req, res) {
     try {
@@ -48,8 +54,11 @@ export async function getMyAllJobs(req, res) {
 }
 export async function getGenerateIncomeByDate(req, res) {
     try {
-        res.status(200).json({data: "get get"})
+        const {idMechanic,dateStart,dateEnd} = req.query;
+           const data = await searchEndStartDate(idMechanic,dateStart,dateEnd)
+        res.status(200).json(data)
     } catch (e) {
-
+        console.log(e)
+        res.status(500).json({message: "server error"})
     }
 }

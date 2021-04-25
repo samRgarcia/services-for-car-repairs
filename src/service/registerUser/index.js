@@ -2,47 +2,47 @@ import Client from "../../model/client";
 import Mechanical from "../../model/mechanical";
 import User from "../../model/user";
 
-export async function createNewUser(data, rol) {
+export async function createNewUser(name,last_name,first_name,gender,phone,email,user,password,rol) {
     if (rol === "client") {
-        await createClient(data)
+        await createClient(name,last_name,first_name,gender,phone,email,user,password,rol)
     } else {
-        await createMechanical(data)
+        await createMechanical(name,last_name,first_name,gender,phone,email,user,password,rol)
     }
 }
 
-async function createClient(data) {
+async function createClient(name,last_name,first_name,gender,phone,email,user,password,rol) {
     await Client.create({
-        name: data.name,
-        last_name: data.last_name,
-        first_name: data.first_name,
-        gender: data.gander,
-        phone: data.phone,
-        email: data.email,
+        name,
+        last_name,
+        first_name,
+        gender,
+        phone,
+        email,
     }).then((res) => {
         const idUser = res.null;
-        registerUsuario(idUser, data);
+        registerUsuario(idUser, password,user,rol);
     }).catch((e) => console.log(e))
 }
 
-async function createMechanical(data) {
+async function createMechanical(name,last_name,first_name,gender,phone,email,user,password,rol) {
     await Mechanical.create({
-        name: data.name,
-        last_name: data.last_name,
-        first_name: data.first_name,
-        gender: data.gander,
-        phone: data.phone,
-        email: data.email,
+        name,
+        last_name,
+        first_name,
+        gender,
+        phone,
+        email,
     }).then((res) => {
         const idUser = res.null;
-        registerUsuario(idUser, data);
+        registerUsuario(idUser, password,user,rol);
     }).catch((e) => console.log(e))
 }
 
-async function registerUsuario(idUser, data) {
+async function registerUsuario(idUser, password,user,rol) {
     await User.create({
-        rol: data.rol,
-        password: data.password,
-        user: data.user,
-        idt_type_user: idUser
+        rol,
+        password,
+        user,
+        idt_type_user:idUser
     })
 }
