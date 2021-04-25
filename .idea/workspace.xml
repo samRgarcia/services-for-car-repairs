@@ -11,12 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="202f16b1-c0c8-4b94-9fbc-dd4f1b744cb6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/service/registerUser/Query/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/mechanic/getMechanic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/mechanic/getMechanic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/registerUser/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/registerUser/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/carMechanic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/carMechanic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/mechanic/querys/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/mechanic/querys/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/mechanic/serviceMechanic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/mechanic/serviceMechanic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/registerUser/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/registerUser/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +70,7 @@
       <workItem from="1619184298586" duration="15194000" />
       <workItem from="1619267552208" duration="18242000" />
       <workItem from="1619298949568" duration="8081000" />
-      <workItem from="1619358034811" duration="291000" />
+      <workItem from="1619358034811" duration="6608000" />
     </task>
     <servers />
   </component>
@@ -90,10 +90,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1189" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618973210182">
+    <state x="1189" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619367775463">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1189" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1618973210182" />
+    <state x="1189" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1619367775463" />
     <state x="136" y="113" width="882" height="840" key="DiffContextDialog" timestamp="1619288536124">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
