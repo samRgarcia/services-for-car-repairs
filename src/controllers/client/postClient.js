@@ -8,9 +8,8 @@ import {
 export async function postRegisterProblems(req, res) {
     try {
         console.log("Register data",req.body)
-        const {registerProblems,problems,listProblems} = req.body;
-        const idClient = 1;
-        await registerNewProblems(registerProblems,problems,listProblems,idClient)
+        const {registerProblems,problems,listProblems,client_idclient} = req.body;
+        await registerNewProblems(registerProblems,problems,listProblems,client_idclient)
         res.status(200).json({message: "register"})
     } catch (e) {
         console.log(e)
