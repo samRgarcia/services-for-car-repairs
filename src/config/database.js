@@ -1,9 +1,11 @@
+import Sequelize from "sequelize";
+
 export const sequelize = new Sequelize(
-    process.env.DB_NAME || "dbcar",
+    process.env.DB_NAME || "bdcar",
     process.env.DB_USER || "root",
-    process.env.DB_PASSWORD || "1234",
+    process.env.DB_PASSWORD || '1234',
     {
-        host:process.env.DB_HOST || "http://localhost",
+        host:process.env.DB_HOST || "localhost",
         dialect:"mysql",
         port:process.env.DB_PORT || '3306',
         pool:{

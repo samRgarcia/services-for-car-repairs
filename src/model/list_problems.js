@@ -11,7 +11,10 @@ const List_problems = sequelize.define('list_problems', {
         },
         mechanical_problems_idmechanical_problems: {
             type: Sequelize.INTEGER
-        }
+        },
+        progress: {
+            type: Sequelize.STRING
+        },
     },
     {
         freezeTableName: true,

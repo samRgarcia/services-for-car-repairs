@@ -17,7 +17,13 @@ const Mechanical = sequelize.define('mechanical', {
         },
         gender: {
             type: Sequelize.STRING
-        }
+        },
+        phone: {
+            type: Sequelize.STRING
+        },
+        email: {
+            type: Sequelize.STRING
+        },
     },
     {
         freezeTableName: true,

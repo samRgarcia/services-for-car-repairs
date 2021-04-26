@@ -1,7 +1,7 @@
 import Sequelize from "sequelize";
 import {sequelize} from "../config/database";
 
-const Idjobs_started = sequelize.define('idjobs_started', {
+const Jobs_started = sequelize.define('jobs_started', {
         idjobs_started: {
             type: Sequelize.INTEGER,
             primaryKey: true
@@ -23,4 +23,4 @@ const Idjobs_started = sequelize.define('idjobs_started', {
 );
 
 
-export default Idjobs_started;
+export default Jobs_started;

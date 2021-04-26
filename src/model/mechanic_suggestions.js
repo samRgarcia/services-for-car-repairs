@@ -17,6 +17,9 @@ const Mechanic_suggestions = sequelize.define('mechanic_suggestions', {
         },
         mechanical_idmechanical: {
             type: Sequelize.INTEGER
+        },
+        status: {
+            type: Sequelize.STRING
         }
     },
     {
