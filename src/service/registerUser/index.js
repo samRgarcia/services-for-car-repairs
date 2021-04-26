@@ -2,7 +2,6 @@ import Client from "../../model/client";
 import Mechanical from "../../model/mechanical";
 import bcrypt from "bcrypt";
 import {sequelize} from "../../config/database";
-import {QUERY_HISTORY_TRACING} from "../client/querys";
 import {QUERY_SEARCH_CLIENT} from "./Query";
 import User from "../../model/user";
 

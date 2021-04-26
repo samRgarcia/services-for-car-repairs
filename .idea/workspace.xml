@@ -13,6 +13,11 @@
     <list default="true" id="202f16b1-c0c8-4b94-9fbc-dd4f1b744cb6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/client/postClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/client/postClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/carMechanic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/carMechanic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/clients.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/clients.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/client/serviceClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/client/serviceClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/mechanic/serviceMechanic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/mechanic/serviceMechanic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/registerUser/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/registerUser/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +72,10 @@
       <workItem from="1619267552208" duration="18242000" />
       <workItem from="1619298949568" duration="8081000" />
       <workItem from="1619358034811" duration="7513000" />
-      <workItem from="1619372955135" duration="7364000" />
+      <workItem from="1619372955135" duration="9676000" />
+      <workItem from="1619410665123" duration="314000" />
+      <workItem from="1619411609232" duration="63000" />
+      <workItem from="1619432304549" duration="2891000" />
     </task>
     <servers />
   </component>
@@ -95,10 +103,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="136" y="113" width="882" height="840" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1619288536124" />
-    <state x="312" y="279" key="FileChooserDialogImpl" timestamp="1619372980966">
+    <state x="312" y="279" key="FileChooserDialogImpl" timestamp="1619432329265">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="312" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1619372980966" />
+    <state x="312" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1619432329265" />
     <state x="1052" y="264" key="run.anything.popup" timestamp="1619329445485">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -107,16 +115,5 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1095" y="243" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1619017150545" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/service/mechanic/serviceMechanic.js</url>
-          <line>14</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

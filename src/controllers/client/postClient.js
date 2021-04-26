@@ -12,9 +12,7 @@ export async function postRegisterProblems(req, res) {
         await registerNewProblems(registerProblems,problems,listProblems,client_idclient)
         res.status(200).json({message: "register"})
     } catch (e) {
-        console.log(e)
         res.status(500).json({data: "server error"})
-
     }
 }
 
@@ -45,9 +43,7 @@ export async function postAcceptedJobs(req, res) {
         await acceptedJobs(idmechanic_suggestions)
         res.status(200).json({message: "register"})
     } catch (e) {
-        console.log(e)
         res.status(500).json({data: "server error"})
-
     }
 }
 export async function postDenyJobs(req, res) {
@@ -56,8 +52,6 @@ export async function postDenyJobs(req, res) {
         await denyJobs(idmechanic_suggestions)
         res.status(200).json({message: "register"})
     } catch (e) {
-        console.log(e)
         res.status(500).json({data: "server error"})
-
     }
 }

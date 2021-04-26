@@ -3,22 +3,17 @@ import Car from "../../model/car";
 import Mechanical_problems from "../../model/mechanical_problems";
 import List_problems from "../../model/list_problems";
 import {QUERY_HISTORY_TRACING, QUERY_ID_VIEW_SUGGESTIONS_CLIENT, QUERY_TRACING} from "./querys";
-import {QUERY_FILTER_ALL_PROBLEMS_OPEN} from "../mechanic/querys";
 import Mechanic_suggestions from "../../model/mechanic_suggestions";
-import Accepted_works from "../../model/accepted_works";
-import Rejected_jobs from "../../model/rejected_jobs";
-//car-model, car-license-place,client
-//idClient description-problems, status,cardId
-//item-description, mechanial-problems-id
 
-export async function registerNewProblems(registerProblems,problems,listProblems,idClient) {
-    const ID_CAR_REGISTER = await registerCar(registerProblems,idClient);
-    const ID_REGISTER_PROBLEMS = await registerMechanicalProblems(problems,ID_CAR_REGISTER)
+
+export async function registerNewProblems(registerProblems, problems, listProblems, idClient) {
+    const ID_CAR_REGISTER = await registerCar(registerProblems, idClient);
+    const ID_REGISTER_PROBLEMS = await registerMechanicalProblems(problems, ID_CAR_REGISTER)
     await newListProblems(listProblems, ID_REGISTER_PROBLEMS)
 }
 
 export async function acceptedJobs(idmechanic_suggestions) {
-   await updateAccepted(idmechanic_suggestions)
+    await updateAccepted(idmechanic_suggestions)
 }
 
 export async function denyJobs(idmechanic_suggestions) {
@@ -27,23 +22,23 @@ export async function denyJobs(idmechanic_suggestions) {
 
 async function updateDeny(idmechanic_suggestions) {
     await Mechanic_suggestions.update({
-        status:"rejected"
-    },{
-        where:{
-            idmechanic_suggestions:idmechanic_suggestions
+        status: "rejected"
+    }, {
+        where: {
+            idmechanic_suggestions: idmechanic_suggestions
         }
     })
 }
 
 async function updateAccepted(idmechanic_suggestions) {
-   await Mechanic_suggestions.update({
-       status:"accepted"
-    },{
-       where: {idmechanic_suggestions:idmechanic_suggestions}
-   })
+    await Mechanic_suggestions.update({
+        status: "accepted"
+    }, {
+        where: {idmechanic_suggestions: idmechanic_suggestions}
+    })
 }
 
-async function registerCar(registerProblems,idClient) {
+async function registerCar(registerProblems, idClient) {
     let req = await Car.create({
         model: registerProblems.model,
         license_place: registerProblems.license_place,
@@ -53,7 +48,7 @@ async function registerCar(registerProblems,idClient) {
     return ID_CAR;
 }
 
-async function registerMechanicalProblems(problems,idCars) {
+async function registerMechanicalProblems(problems, idCars) {
     let req = await Mechanical_problems.create({
         descriptions: problems.descriptions,
         status: "open",
@@ -65,8 +60,8 @@ async function registerMechanicalProblems(problems,idCars) {
 
 async function newListProblems(list = [], idMechanicalProblems) {
     for (let index = 0; index < list.length; index++) {
-        await List_problems.create({
-            description: list[index].description,
+        list[index].descriptions && await List_problems.create({
+            description: list[index].descriptions,
             progress: "initial",
             mechanical_problems_idmechanical_problems: idMechanicalProblems
         })
@@ -102,12 +97,13 @@ export async function idSuggestionsClient(idClient) {
     });
     return req;
 }
+
 export async function approveSolution(idMechanical) {
     await Mechanical_problems.update(
         {status: "approve"},
         {
-        where: {idmechanical_problems: idMechanical}
-    })
+            where: {idmechanical_problems: idMechanical}
+        })
 }
 
 export async function denySolution(idMechanical) {
@@ -117,6 +113,7 @@ export async function denySolution(idMechanical) {
             where: {idmechanical_problems: idMechanical}
         })
 }
+
 export async function acceptedSuggestion(idSuggestions) {
     await Mechanic_suggestions.update(
         {status: "approved"},

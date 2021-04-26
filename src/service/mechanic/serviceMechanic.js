@@ -26,13 +26,14 @@ export async function registerStartJob(idCar, idMechanical) {
 export async function registerFinishJob(idjobs_started) {
     await finishJob(idjobs_started)
 }
-export async function searchEndStartDate(idMechanic,dateStart,dateEnd) {
-    return await searcheDate(idMechanic,dateStart,dateEnd)
+
+export async function searchEndStartDate(idMechanic, dateStart, dateEnd) {
+    return await searcheDate(idMechanic, dateStart, dateEnd)
 }
 
-async function searcheDate(idMechanic,dateStart,dateEnd) {
+async function searcheDate(idMechanic, dateStart, dateEnd) {
     const req = await sequelize.query(QUERY_VIEW_SEARCH_DATE, {
-        replacements: [dateStart,dateEnd,idMechanic],
+        replacements: [dateStart, dateEnd, idMechanic],
         type: sequelize.QueryTypes.SELECT,
         raw: true,
         nest: true
